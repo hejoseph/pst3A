@@ -36,7 +36,7 @@ public class MainActivity extends Activity implements View.OnClickListener,
 
 	public final static String historyDataId ="historyDataId";
 	
-	ImageButton creditsImageButton, historyImageButton, settingsImageButton;
+	ImageButton creditsImageButton, historyImageButton, settingsImageButton, shortcutImageButton;
 	TextView pinCodeET;
 	Button setPinButton;
 	LinearLayout layoutTop;
@@ -63,6 +63,9 @@ public class MainActivity extends Activity implements View.OnClickListener,
 		creditsImageButton.setOnClickListener(creditsImageButtonListener);
 		setPinButton = (Button) findViewById(R.id.setPinButton);
 		setPinButton.setOnClickListener(this);
+		
+		shortcutImageButton = (ImageButton) findViewById(R.id.shortcutImageButton);
+		shortcutImageButton.setOnClickListener(this);
 		
 		settingsImageButton = (ImageButton) findViewById(R.id.settingsImageButton);
 		settingsImageButton.setOnClickListener(this);
@@ -262,8 +265,13 @@ public class MainActivity extends Activity implements View.OnClickListener,
 			startActivity(intent);
 		}
 		
-		if(v.getId() == R.id.settingsImageButton){
+		if(v.getId() == R.id.shortcutImageButton){
 			Intent intent = new Intent(MainActivity.this, AllAppsActivity.class);
+			startActivity(intent);
+		}
+		
+		if(v.getId() == R.id.settingsImageButton){
+			Intent intent = new Intent(MainActivity.this, Instruction.class);
 			startActivity(intent);
 		}
 

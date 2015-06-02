@@ -125,14 +125,21 @@
           android:background="#00000000"
           android:src="@drawable/sync_button" />
 
-       <ImageButton
+        <ImageButton
           android:id="@+id/shortcutImageButton"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-           android:layout_below="@+id/center_object"
-           android:layout_alignRight="syncNfcImageButton"
-          />
-      
+          android:layout_alignParentBottom="false"
+          android:layout_below="@+id/center_object"
+          android:layout_toRightOf="@+id/syncNfcImageButton"
+          android:layout_centerHorizontal="true"
+          android:layout_centerInParent="false"
+          android:layout_centerVertical="false"
+          android:layout_marginTop="-20dp"
+          android:layout_marginLeft="5dp"
+          android:background="#00000000"
+          android:src="@drawable/shortcut_button" />
+       
       <TextView
           android:id="@+id/center_object"
           android:layout_width="wrap_content"
